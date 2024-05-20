@@ -16,6 +16,10 @@ return [
         'request' => [
             'csrfParam' => '_csrf-backend',
         ],
+        'cart' => [
+            'class' => 'yz\shoppingcart\ShoppingCart',
+            'cartId' => 'my_application_cart',
+        ],
         'view' => [
             'theme' => [
                 'pathMap' => [

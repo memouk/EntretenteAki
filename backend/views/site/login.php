@@ -3,7 +3,7 @@ use yii\helpers\Html;
 ?>
 <div class="card">
     <div class="card-body login-card-body">
-        <p class="login-box-msg">Sign in to start your session</p>
+        <p class="login-box-msg">Iniciar Session</p>
 
         <?php $form = \yii\bootstrap4\ActiveForm::begin(['id' => 'login-form']) ?>
 
@@ -42,7 +42,7 @@ use yii\helpers\Html;
 
         <?php \yii\bootstrap4\ActiveForm::end(); ?>
 
-        <div class="social-auth-links text-center mb-3">
+        <!-- <div class="social-auth-links text-center mb-3">
             <p>- OR -</p>
             <a href="#" class="btn btn-block btn-primary">
                 <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
@@ -50,14 +50,14 @@ use yii\helpers\Html;
             <a href="#" class="btn btn-block btn-danger">
                 <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
             </a>
-        </div>
+        </div> -->
         <!-- /.social-auth-links -->
 
         <p class="mb-1">
-            <a href="forgot-password.html">I forgot my password</a>
+            <a href="http://localhost:8081/index.php?r=site%2Frequest-password-reset">Si no recurdas tu password</a>
         </p>
         <p class="mb-0">
-            <a href="register.html" class="text-center">Register a new membership</a>
+            <a href="http://localhost:8081/index.php?r=site%2Fsignup" class="text-center">Registrase</a>
         </p>
     </div>
     <!-- /.login-card-body -->
