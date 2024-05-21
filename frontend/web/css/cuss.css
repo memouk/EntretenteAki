@@ -1,0 +1,11 @@
+/* Estilos para el carrusel */
+.carousel-inner {
+  max-height: 150px; /* Ajusta la altura máxima según tus necesidades */
+}
+
+.carousel-item img {
+  object-fit: contain;
+  max-height: 150px; /* Ajusta la altura máxima según tus necesidades */
+  width: auto;
+  margin: 0 auto;
+}

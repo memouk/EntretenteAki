@@ -1,5 +1,9 @@
 <?php
+use yii\helpers\Url;
+use yii\web\YiiAsset;
 
+YiiAsset::register($this);
+$this->registerCssFile('@web/css/cuss.css');
 /** @var yii\web\View $this */
 
 $this->title = 'EntretenteAki';
@@ -18,16 +22,16 @@ $this->title = 'EntretenteAki';
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
     <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="images/descarga.jpg" class="d-block w-100" alt="Imagen 1">
-        </div>
-        <div class="carousel-item">
-            <img src=".ruta_a_imagen2.jpg" class="d-block w-100" alt="Imagen 2">
-        </div>
-        <div class="carousel-item">
-            <img src="ruta_a_imagen3.jpg" class="d-block w-100" alt="Imagen 3">
-        </div>
+    <div class="carousel-item active">
+        <img src="<?= Url::to('@web/images/netflix.png') ?>" class="d-block w-100" alt="Imagen 1">
     </div>
+    <div class="carousel-item">
+        <img src="<?= Url::to('@web/images/aws.png') ?>" class="d-block w-100" alt="Imagen 2">
+    </div>
+    <div class="carousel-item">
+        <img src="<?= Url::to('@web/images/dis.png') ?>" class="d-block w-100" alt="Imagen 3">
+    </div>
+</div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>
