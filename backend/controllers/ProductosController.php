@@ -72,8 +72,9 @@ class ProductosController extends Controller
 
     public function actionCart()
     {
-        return $this->render('detalle', [
-            'model' => $this->findModel(\Yii::$app->cart->getCount()),
+        $model = new Productos();
+        return $this->render('cart', [
+            'model' => $model,
         ]);
     }
 
@@ -125,7 +126,7 @@ class ProductosController extends Controller
     $model = Productos::findOne($id);
     if ($model) {
         $cart->put($model, 1);
-        return $this->redirect(['cart']);
+        return $this->redirect(['index']);
     }
     throw new NotFoundHttpException();
 }

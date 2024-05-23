@@ -18,7 +18,10 @@ $this->params['breadcrumbs'][] = $this->title;
                 <h3 class="box-title">Detalles del Carrito</h3>
             </div>
             <div class="box-body">
-                <?php if (!empty($items)): ?>
+                <?php 
+                //$items = \Yii::$app->cart->getId();
+                //var_dump($items);exit;
+                if (!empty($items)): ?>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
@@ -44,7 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?php endif; ?>
             </div>
             <div class="box-footer">
-                <a href="<?= \yii\helpers\Url::to(['product/index']) ?>" class="btn btn-default">Continuar Comprando</a>
+                <a href="<?= \yii\helpers\Url::to(['productos/index']) ?>" class="btn btn-default">Continuar Comprando</a>
                 <a href="<?= \yii\helpers\Url::to(['checkout/index']) ?>" class="btn btn-success pull-right">Proceder al Pago</a>
             </div>
         </div>

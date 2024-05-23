@@ -13,7 +13,7 @@
                 <img src="<?=$assetDir?>/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
             </div>
             <div class="info">
-                <a href="#" class="d-block">Luis</a>
+                <a href="#" class="d-block">Luis Guillermo</a>
             </div>
         </div>
 
@@ -37,13 +37,12 @@
                 'items' => [
                     [
                         'label' => 'Productos',
-                        'icon' => 'tachometer-alt',
-                        'badge' => '<span class="right badge badge-info">2</span>',
+                        'icon' => 'leaf',
                         'items' => [
-                            ['label' => 'ProductosAll', 'url' => ['productos/index'], 'iconStyle' => 'far'],
-                            ['label' => ' Crear Productos', 'url' => ['productos/create'], 'iconStyle' => 'far']
+                            ['label' => 'Ver Productos', 'url' => ['/productos/index']],
+                            ['label' => 'Nuevo prodcuto', 'url' => ['/productos/create']],
                         ]
-                    ]
+                    ],
                     
                     
                     

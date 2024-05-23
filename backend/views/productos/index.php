@@ -39,19 +39,24 @@ $this->params['breadcrumbs'][] = $this->title;
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, Productos $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'id' => $model->id]);
-                 }
+                 },
+                 
             ],
             [
                 'class' => 'yii\grid\ActionColumn',
                 'template' => '{add-to-cart}',
+                'headerOptions' => [
+                    'style' => 'width: 50px;',
+                ],
                 'buttons' => [
-                    'add-to-cart' => function ($url, $model) {
-                        return Html::a('Agregar al carrito', ['/productos/add', 'id' => $model->id], [
-                            'class' => 'btn btn-primary',
+                    'add-to-cart' => function ($url, $model, $key) {
+                        return Html::a('<i class="fa fa-shopping-cart"></i>', ['productos/add', 'id' => $model->id], [
+                            'title' => 'Agregar al carrito',
                             'data-method' => 'post',
                         ]);
                     },
                 ],
+                
             ],
         ],
     ]); ?>
